@@ -1,0 +1,48 @@
+<div th:fragment="header">
+    <nav class="navbar navbar-expand-md navbar-green bg-dark sticky-top">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brad"><img src="img/logo/logo.svg"></a>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="btn btn-outline-success" type="button" href="/registration" >
+                                Подать заявку
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary" href="/dashboard" type="button"  >
+                                Личный кабинет
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>
+<div th:fragment="header_top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarResponsiv">
+                <ul class="navbar-nav ml-auto">
+                    <li><a class="btn btn-light" href="#info">что вы получаете</a></li>
+                    <li><a class="btn btn-light" href="#skills">направления</a></li>
+                    <li><a class="btn btn-light" href="#learning">принципы обучения</a></li>
+                    <li><a class="btn btn-light" href="#step_learning">этапы</a></li>
+                    <li><a class="btn btn-light" href="/#work">трудоустройство</a></li>
+                    <li><a class="btn btn-light" href="#contact">контакты</a></li>
+                    <li><a class="btn btn-light" href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
