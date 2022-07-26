@@ -1,0 +1,92 @@
+/* Theme default */
+/* ======= Projects page ========= */
+.articles-view .projects-heading {
+  position: relative;
+  margin-bottom: 30px;
+}
+.articles-view .projects-heading .title {
+  margin-bottom: 0;
+}
+.articles-view .projects-heading .actions {
+  position: absolute;
+  right: 0;
+  top: -6px;
+}
+.articles-view .projects-heading .utility {
+  margin-right: 5px;
+}
+.articles-view .tab {
+  /*position: relative;
+  display: inline-block;*/
+  vertical-align: middle;
+
+}
+.articles-view .tab .nav-tabs{
+    margin-bottom: 0px;
+
+}
+.project-module .module-inner {
+    padding: 0px;
+}
+
+.articles-view .col-wrapper .module-wrapper {
+    margin-bottom: 20px;
+}
+
+.project-module .module-title a:hover {
+    text-decoration: none;
+}
+.project-module:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.project-module .module-title {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: #494d55;
+}
+.users-view .project-module .module-title {
+  font-size: 16px;
+}
+.project-module .meta {
+  margin-top: 5px;
+  color: #c3c3c3;
+  font-size: 12px;
+}
+.project-module .subtitle {
+  color: 14px;
+  margin-top: 0;
+  color: #616670;
+}
+.project-module .project-team .member {
+  margin-bottom: 5px;
+}
+.project-module .project-team .member img {
+  width: 38px;
+}
+.project-module .project-team .more-member {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #40babd;
+  color: #40babd;
+  border-radius: 50%;
+  background-clip: padding-box;
+  vertical-align: middle;
+  padding-top: 8px;
+  font-weight: bold;
+}
+.widget .module-footer {
+    padding: 5px;
+}
+.widget .module-footer .module-title{
+    font-size: 14px;
+}
+.widget .module-footer .info_bar{
+    font-size: 12px;
+}
+.project-module .bi_docs_folder .label-review {
+    color: #95a5a6;
+}

@@ -1,91 +1,205 @@
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-md navbar-green bg-dark sticky-top">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brad"><img src="img/logo/logo.svg"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+    <header class="header bg-light">
+        <div class="branding float-left bg-dark ">
+            <h1 class="logo text-center">
+                <a href="/dashboard">
+                    <img class="logo-icon" width="100" height="100" src="img/logo/logo.svg" alt="icon">
+                    <span class="nav-label" >Online</span>
+                </a>
+            </h1>
+        </div>
 
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary" type="button" href="#"  aria-haspopup="true" aria-expanded="false">
-                                Dashboard
-                            </button>
-                        </div>
-                    </li>
+        <div class="topbar">
 
-                    <li>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="projectsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Projects
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="projectsMenu">
-                            <a class="dropdown-item" href="#">Projects Map</a>
-                            <a class="dropdown-item" href="#">Current Project</a>
-                            <a class="dropdown-item" href="#">Exam</a>
-                            <a class="dropdown-item" href="#">Team</a>
-                        </div>
+            <div class="search-container">
+                <form id="main-search" class="main-search" action="/search" method="get">
+                    <i id="main-search-toggle" class="fa fa-search icon"></i>
+                    <div id="main-search-input-wrapper" class="main-search-input-wrapper" style="display: block;">
+                        <input type="text" class="input main-search-input form-control" name="q" value placeholder="Найти на сайте">            <span id="clear-search" aria-hidden="true" class="fs1 icon icon_close_alt2 clear-search" style="display: none;"></span>
                     </div>
-                    </li>
+                </form>
+            </div>
 
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="learnMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Learning
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="learnMenu">
-                                <a class="dropdown-item" href="#">Learn Map</a>
-                                <a class="dropdown-item" href="#">Learn action</a>
-                                <a class="dropdown-item" href="#">Peer to Peer</a>
+            <div class="navbar-tools">
+
+                <div class="utilities-container">
+                    <div class="utilities">
+                        <!-- Dashboard -->
+                        <div class="item item-notifications">
+                            <div class="rounded-1 " id="home" aria-expanded="false" role="button" >
+                                <a href="/dashboard">
+                                    <span class="sr-only">Dashboard</span>
+                                    <span class="pe-icon pe-7s-home icon"  data-placement="bottom" title="Рабочая панель" style="font-size: 40px;"></span>
+                                </a>
                             </div>
                         </div>
-                    </li>
+                        <!-- Learning -->
+                        <div class="item item-notifications dropdown">
 
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="progressMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Progress
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="progressMenu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-toggle  rounded-1 " id="learn" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
+                                <span class="sr-only">Learning</span>
+                                <span class="pe-icon pe-7s-study icon" data-toggle="tooltip" data-placement="bottom" title="Учеба" style="font-size: 40px;"></span>
                             </div>
-                        </div>
-                    </li>
 
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="interest" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                Interesting
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="interest">
-                                <a class="dropdown-item" href="#">News</a>
-                                <a class="dropdown-item" href="#">Posts</a>
-                                <a class="dropdown-item" href="#">Hackathons</a>
-                            </div>
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="learn" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="/learn_action"><i class="pe-icon pe-7s-tools"></i>    Learn action</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/learn_map"><i class="pe-icon pe-7s-graph1"></i>    Learn Map</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/peer_to_peer"><i class="pe-icon pe-7s-id"></i>    Peer to Peer</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/problems"><i class="pe-icon pe-7s-settings"></i>    Problems</a></li>
+                            </ul>
+
                         </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="interest" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" th:inline="text" >
-                                [[${#httpServletRequest.remoteUser}]]
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="interest">
-                                <a class="dropdown-item" href="#">Messages</a>
-                                <a class="dropdown-item" href="#">My team</a>
-                                    <form  class="dropdown-item" th:action="@{/logout}" method="post">
-                                        <input type="submit" value="Sign Out"/>
-                                    </form>
+                        <!-- Progress -->
+                        <div class="item item-notifications dropdown">
+
+                            <div class="dropdown-toggle  rounded-1 " id="progress" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
+                                <span class="sr-only">Lang</span>
+                                <span class="pe-icon pe-7s-vector icon" data-toggle="tooltip" data-placement="bottom" title="Progress" style="font-size: 40px;"></span>
+
                             </div>
+
+
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="progress" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-science"></i>    Tribe tournament</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-rocket"></i>    Tasks progress</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-medal"></i>    Points</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- Projects -->
+                        <div class="item item-notifications dropdown">
+
+                            <div class="dropdown-toggle  rounded-1 " id="projects" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
+                                <span class="sr-only">Lang</span>
+                                <span class="pe-icon pe-7s-plugin icon" data-toggle="tooltip" data-placement="bottom" title="Project" style="font-size: 40px;"></span>
+
+                            </div>
+
+
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="projects" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- Interesting -->
+                        <div class="item item-notifications dropdown">
+
+                            <div class="dropdown-toggle  rounded-1 " id="inters" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
+                                <span class="sr-only">Lang</span>
+                                <span class="pe-icon pe-7s-diamond icon" data-toggle="tooltip" data-placement="bottom" title="Interesting" style="font-size: 40px;"></span>
+
+                            </div>
+
+
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="inters" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                            </ul>
+
+                        </div>
+
                     </div>
-                    </li>
-                </ul>
+                </div>
+
+                <div class="utilities-container menu_auth">
+                    <div class="utilities">
+                        <div class="item item-notifications dropdown">
+
+                            <div class="dropdown-toggle  rounded-1 " id="dropdownMenu-notifications" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
+                                <span class="sr-only">Lang</span>
+                                <span>username<span class="pe-icon pe-7s-user icon" data-toggle="tooltip" data-placement="bottom" title="User"></span></span>
+
+                            </div>
+
+
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="dropdownMenu-notifications" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Карьера</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Вакансии</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Стажировка</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
-    </nav>
+    </header>
+</div>
+
+<div th:fragment="menu">
+    <div class="main-nav-wrapper bg-dark">
+        <nav id="main-nav" class="main-nav " style="height: 100vh">
+            <ul id="menu">
+                <div class="bg-dark">
+                    <br>
+                    <!-- Messeges-->
+                    <li class=" border rounded-5">
+                        <a href="/messages" target="_self">
+                            <span class="pe-icon pe-7s-chat icon" data-toggle="tooltip" data-placement="bottom" title="Чат" data-original-title="Чат"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- Video -->
+                    <li class=" border rounded-5">
+                        <a href="/my_video" target="_self">
+                            <span class="pe-icon pe-7s-film icon" data-toggle="tooltip" data-placement="bottom" title="Видео" data-original-title="Видео"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- Tape -->
+                    <li class=" border rounded-5">
+                        <a href="/tape" target="_self">
+                            <span class="pe-icon pe-7s-news-paper icon" data-toggle="tooltip" data-placement="bottom" title="Лента" data-original-title="Лента"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- Музыка pe-7s-music-->
+                    <li class=" border rounded-5">
+                        <a href="/my_music" target="_self">
+                            <span class="pe-icon pe-7s-music icon" data-toggle="tooltip" data-placement="bottom" title="Музыка" data-original-title="Музыка"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- Портфолио pe-7s-portfolio-->
+                    <li class=" border rounded-5">
+                        <a href="/portfolio" target="_self">
+                            <span class="pe-icon pe-7s-portfolio icon" data-toggle="tooltip" data-placement="bottom" title="Портфолио" data-original-title="Портфолио"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- майл pe-7s-mail-->
+                    <li class=" border rounded-5">
+                        <a href="/mail" target="_self">
+                            <span class="pe-icon pe-7s-mail icon" data-toggle="tooltip" data-placement="bottom" title="email" data-original-title="email"></span>
+                        </a>
+                    </li>
+                    <br>
+                    <!-- Команда pe-7s-users-->
+                    <li class=" border rounded-5">
+                        <a href="/my_team" target="_self">
+                            <span class="pe-icon pe-7s-users icon" data-toggle="tooltip" data-placement="bottom" title="Команда" data-original-title="Команда"></span>
+                        </a>
+                    </li>
+                    <br>
+                </div>
+
+
+            </ul>
+        </nav>
+    </div>
 </div>

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MessangerController {
     @GetMapping("/messages")
     public String getMessages(Model model) {
-        return "pages/system/pageDevelopment";
+        return "pages/messenger/messenger";
     }
 
 }
