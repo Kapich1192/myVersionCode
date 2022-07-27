@@ -96,9 +96,9 @@
 
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="inters" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/news"><i class="pe-icon pe-7s-tools"></i>    News</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Posts</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Hackatons</a></li>
 
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
@@ -146,6 +146,11 @@
         <nav id="main-nav" class="main-nav " style="height: 100vh">
             <ul id="menu">
                 <div class="bg-dark">
+                    <li>
+                        <div class="text-center">
+                            <h1  th:text="${title}"></h1>
+                        </div>
+                    </li>
                     <br>
                     <!-- Messeges-->
                     <li class=" border rounded-5">
@@ -203,3 +208,7 @@
         </nav>
     </div>
 </div>
+
+
+
+

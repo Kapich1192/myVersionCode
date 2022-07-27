@@ -8,12 +8,16 @@
 </head>
     <body>
     <!--================================ Navigation ==================================-->
+
         <div class="sticky-top">
+            <!--Fragment Header-->
+
             <!--Fragment Header-->
             <div th:insert="blocks/header/header :: header"></div>
             <!--Fragment Social menu-->
             <div th:insert="blocks/header/header :: menu"></div>
         </div>
+    <div th:insert="blocks/admin/panel :: panel"></div>
     <!--================================ Content  ==================================-->
     <div class="bg-light">
         <div class="container-fluid border" style="padding: 50px 50px 0 100px">
