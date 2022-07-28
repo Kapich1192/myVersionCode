@@ -857,16 +857,16 @@ button.close:focus {
 }
 /* ======= Main Nav ======= */
 .main-nav-wrapper {
-  background: #494d55;
-  color: #fff;
+  /*background: #494d55;
+  color: #fff;*/
   min-height: 100%;
   position: absolute;
   transition: width 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  width: 70px;
+  width: 50px;
 }
 .compact:not(.nav-toggled) .main-nav-wrapper,
 .nav-toggled:not(.compact):not(.mobile) .main-nav-wrapper {
-  width: 70px;
+  width: 50px;
 }
 
 .compact:not(.nav-toggled) .main-nav-wrapper .collapse,
@@ -882,7 +882,7 @@ button.close:focus {
 .compact:not(.nav-toggled) .main-nav-wrapper .sub-menu:hover,
 .nav-toggled:not(.compact):not(.mobile) .main-nav-wrapper .sub-menu:hover {
   position: absolute;
-  background-color: #31343a;
+  /*background-color: #31343a;*/
   display: block;
   z-index: 10;
 }
@@ -894,16 +894,16 @@ button.close:focus {
 }
 
 .mobile.nav-toggled .main-nav-wrapper {
-  width: 70px;
+  width: 50px;
 }
 .mobile:not(.nav-toggled) .main-nav-wrapper {
-  width: 70px;
+  width: 50px;
 }
 
 .mobile:not(.nav-toggled) .main-nav-wrapper li {
   transform: translateX(0px);
   transition: transform;
-  color: #fff;
+  /*color: #fff;*/
 
 }
 
@@ -919,7 +919,7 @@ button.close:focus {
 }
 .main-nav-wrapper .main-nav li.active a,
 .mobile .main-nav-wrapper .main-nav li a {
-  background: #31343a;
+  /*background: #31343a;*/
 }
 
 .main-nav-wrapper .main-nav li.divider {
@@ -947,7 +947,7 @@ button.close:focus {
 */
 .main-nav-wrapper .main-nav li a:hover {
   text-decoration: none;
-  background: #31343a;
+  /*background: #31343a;*/
   color: #fff;
 }
 .mobile:not(.nav-toggled) .main-nav-wrapper .main-nav li a {
@@ -955,7 +955,7 @@ button.close:focus {
 }
 .main-nav-wrapper .main-nav li a .icon {
   line-height: 1.6;
-  font-size: 40px;
+  font-size: 25px;
   position: relative;
   top: -2px;
 }
@@ -990,12 +990,12 @@ button.close:focus {
   border-bottom: none;
 }
 .main-nav-wrapper .main-nav li .sub-menu li a:hover {
-  background: #26282c;
+  /*background: #26282c;*/
 }
 .main-nav-wrapper .main-nav li .sub-menu li.active > a {
   color: #fff;
   border-left: 4px solid #684B96;
-  background: #26282c;
+  /*background: #26282c;*/
 }
 /*
 .main-nav-wrapper .main-nav .sub-menu.collapse.in .folder.active > a > .nav-label {
@@ -1006,7 +1006,7 @@ button.close:focus {
 }
 */
 .theme-2 .main-nav-wrapper .main-nav li .sub-menu li.active a {
-  border-left-color: #6dbd63;
+  /*border-left-color: #6dbd63;*/
 }
 .theme-3 .main-nav-wrapper .main-nav li .sub-menu li.active a {
   border-left-color: #497cb1;

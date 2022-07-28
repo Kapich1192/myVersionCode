@@ -1,6 +1,6 @@
 <div th:fragment="header" xmlns="http://www.w3.org/1999/html">
-    <header class="header bg-light">
-        <div class="branding float-left bg-dark ">
+    <header class="header bg-light ">
+        <div class="branding float-left bg-dark rounded-start rounded-5 opacity-75">
             <h1 class="logo text-center">
                 <a href="/dashboard">
                     <img class="logo-icon" width="100" height="100" src="img/logo/logo.svg" alt="icon">
@@ -135,60 +135,55 @@
 </div>
 
 <div th:fragment="menu">
-    <div class="main-nav-wrapper bg-dark">
-        <nav id="main-nav" class="main-nav " style="height: 100vh">
-            <ul id="menu">
-                <div class="bg-dark">
-                    <li>
-                        <div class="text-center">
-                            <h1  th:text="${title}"></h1>
-                        </div>
-                    </li>
+    <div class="main-nav-wrapper bg-dark rounded-5 opacity-75"  >
+        <nav id="main-nav" class="main-nav data-bs-scroll" style="height: 100vh">
+            <ul id="menu" class="text-center ">
+                <div>
                     <br>
                     <!-- Messeges-->
-                    <li class=" border rounded-5">
+                    <li class=" rounded-5">
                         <a href="/messages" target="_self">
                             <span class="pe-icon pe-7s-chat icon" data-toggle="tooltip" data-placement="bottom" title="Чат" data-original-title="Чат"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Video -->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/video" target="_self">
                             <span class="pe-icon pe-7s-film icon" data-toggle="tooltip" data-placement="bottom" title="Видео" data-original-title="Видео"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Tape -->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/tape" target="_self">
                             <span class="pe-icon pe-7s-news-paper icon" data-toggle="tooltip" data-placement="bottom" title="Лента" data-original-title="Лента"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Музыка pe-7s-music-->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/music" target="_self">
                             <span class="pe-icon pe-7s-music icon" data-toggle="tooltip" data-placement="bottom" title="Музыка" data-original-title="Музыка"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Портфолио pe-7s-portfolio-->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/portfolio" target="_self">
                             <span class="pe-icon pe-7s-portfolio icon" data-toggle="tooltip" data-placement="bottom" title="Портфолио" data-original-title="Портфолио"></span>
                         </a>
                     </li>
                     <br>
                     <!-- майл pe-7s-mail-->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/mail" target="_self">
                             <span class="pe-icon pe-7s-mail icon" data-toggle="tooltip" data-placement="bottom" title="email" data-original-title="email"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Команда pe-7s-users-->
-                    <li class=" border rounded-5">
+                    <li class="  rounded-5">
                         <a href="/team" target="_self">
                             <span class="pe-icon pe-7s-users icon" data-toggle="tooltip" data-placement="bottom" title="Команда" data-original-title="Команда"></span>
                         </a>
