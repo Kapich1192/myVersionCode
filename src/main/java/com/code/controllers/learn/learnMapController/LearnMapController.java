@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LearnMapController {
     @GetMapping("/learn_map")
     public String getLearnMap(Model model) {
-        return "pages/system/pageDevelopment";
+        return "pages/learn_map/learn_map";
     }
 }

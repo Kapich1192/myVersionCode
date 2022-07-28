@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LearnActionController {
     @GetMapping("/learn_action")
     public String getLearnAction(Model model) {
-        return "pages/system/pageDevelopment";
+        return "pages/learn_action/learn_action";
     }
 }

@@ -1,4 +1,4 @@
-<div th:fragment="header">
+<div th:fragment="header" xmlns="http://www.w3.org/1999/html">
     <header class="header bg-light">
         <div class="branding float-left bg-dark ">
             <h1 class="logo text-center">
@@ -75,13 +75,9 @@
 
                             </div>
 
-
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="projects" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Current project</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Project map</a></li>
                             </ul>
 
                         </div>
@@ -105,17 +101,15 @@
                             </ul>
 
                         </div>
-
                     </div>
                 </div>
-
                 <div class="utilities-container menu_auth">
                     <div class="utilities">
                         <div class="item item-notifications dropdown">
 
                             <div class="dropdown-toggle  rounded-1 " id="dropdownMenu-notifications" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
                                 <span class="sr-only">Lang</span>
-                                <span>username<span class="pe-icon pe-7s-user icon" data-toggle="tooltip" data-placement="bottom" title="User"></span></span>
+                                <span>[[${#httpServletRequest.remoteUser}]]<span class="pe-icon pe-7s-user icon" data-toggle="tooltip" data-placement="bottom" title="user"></span></span>
 
                             </div>
 
@@ -128,14 +122,13 @@
                                 <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Вакансии</a></li>
                                 <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Стажировка</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/logout"><form th:action="@{/logout}" method="post"><input type="submit" value="Выйти" class="btn btn-light"></form></a></li>
                             </ul>
 
                         </div>
 
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
@@ -161,7 +154,7 @@
                     <br>
                     <!-- Video -->
                     <li class=" border rounded-5">
-                        <a href="/my_video" target="_self">
+                        <a href="/video" target="_self">
                             <span class="pe-icon pe-7s-film icon" data-toggle="tooltip" data-placement="bottom" title="Видео" data-original-title="Видео"></span>
                         </a>
                     </li>
@@ -175,7 +168,7 @@
                     <br>
                     <!-- Музыка pe-7s-music-->
                     <li class=" border rounded-5">
-                        <a href="/my_music" target="_self">
+                        <a href="/music" target="_self">
                             <span class="pe-icon pe-7s-music icon" data-toggle="tooltip" data-placement="bottom" title="Музыка" data-original-title="Музыка"></span>
                         </a>
                     </li>
@@ -196,7 +189,7 @@
                     <br>
                     <!-- Команда pe-7s-users-->
                     <li class=" border rounded-5">
-                        <a href="/my_team" target="_self">
+                        <a href="/team" target="_self">
                             <span class="pe-icon pe-7s-users icon" data-toggle="tooltip" data-placement="bottom" title="Команда" data-original-title="Команда"></span>
                         </a>
                     </li>

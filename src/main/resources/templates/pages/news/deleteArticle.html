@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <meta charset="UTF-8">
+        <title th:text="${title}"></title>
+        <!-- CSS only -->
+        <div th:insert="blocks/sys/css :: css"></div>
+</head>
+    <body>
+    <!--================================ Navigation ==================================-->
+        <div class="sticky-top">
+            <!--Fragment Header-->
+            <div th:insert="blocks/header/header :: header"></div>
+            <!--Fragment Social menu-->
+            <div th:insert="blocks/header/header :: menu"></div>
+        </div>
+    <div th:insert="blocks/admin/panel :: panel"></div>
+    <!--================================ Content  ==================================-->
+    <div class="bg-light">
+        <div class="container-fluid border" style="padding: 50px 50px 0 100px">
+
+
+            <div class="row">
+                <!-- start news-->
+            <div class="col-8">
+                <div class="shadow-lg p-3 mb-5 bg-body border rounded-5" th:each="el : ${articles}">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <!--Title news -->
+                        <h3 th:text="${el.title}"></h3>
+                        <!--Image news -->
+                        <img class="card-img-top"  data-src="img/news/title.jpg" alt="img/news/title.jpg" style="height: 225px; width: 100%; display: block;" src="img/news/title.jpg" data-holder-rendered="true">
+                        <!--Anons news -->
+                        <p class="card-text" th:text="${el.anons}"></p>
+                        <!-- Button -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a th:href="'/news/' + ${el.id}"><button type="button" class="btn btn-success border">Читать далее</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <!-- end news-->
+                <div class="col-1"></div>
+                <!-- end news-->
+                <div class="col-3 shadow-lg p-3 mb-5 bg-body border rounded-5">
+                <p>Site bar<p>
+                </div>
+                <!-- end news-->
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+        <!--=====================Footer====================================== -->
+        <div th:insert="blocks/footer/footer :: footer" class="footer" ></div>
+    <div th:insert="blocks/sys/js :: js"></div>
+    </body>
+</html>
