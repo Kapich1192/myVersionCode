@@ -25,27 +25,35 @@
         // создайте полярную диаграмму
         var chart = anychart.polar();
         // variables
-        var html_l = [[${html_level}]];
-        var java_l = [[${java_level}]];
-        var js_l = [[${js_level}]];
+        var html_l = [[${users.htmlSkill}]];
+        var css_l = [[${users.cssSkill}]];
+        var java_l = [[${users.javaSkill}]];
+        var js_l = [[${users.javaScriptSkill}]];
+        var cpp_l = [[${users.cppSkill}]];
+        var python_l = [[${users.pythonSkill}]];
+        var csharp_l = [[${users.csharpSkill}]];
+        var kotlin_l = [[${users.kotlinSkill}]];
+        var swift_l = [[${users.swiftSkill}]];
+        var c_l = [[${users.cSkill}]];
+        var algo_l = [[${users.algorithmsSkill}]];
+        var sql_l = [[${users.sqlSkill}]];
+        var php_l = [[${users.phpSkill}]];
 
         // добавление данных в виде массива объектов
         var data = [
           { x: 'HTML', value: html_l },
-          { x: 'CSS', value: 36.1 },
+          { x: 'CSS', value: css_l },
           { x: 'JS', value: js_l },
-          { x: 'C++', value: 25 },
-          { x: 'Python', value: 24.1 },
+          { x: 'C++', value: cpp_l },
+          { x: 'Python', value: python_l },
           { x: 'Java', value: java_l },
-          { x: 'C#', value: 20.3 },
-          { x: 'Kotlin', value: 19.8 },
-          { x: 'Swift', value: 18.7 },
-          { x: 'C', value: 11.8 },
-          { x: 'Algoritms', value: 10.58 },
-          { x: 'SQL', value: 9.28 },
-          { x: 'Backend', value: 9.22 },
-          { x: 'Frontend', value: 7.18 },
-          { x: 'Security', value: 7.4 }
+          { x: 'C#', value: csharp_l },
+          { x: 'Kotlin', value: kotlin_l },
+          { x: 'Swift', value: swift_l },
+          { x: 'C', value: c_l },
+          { x: 'Algorithms', value: algo_l },
+          { x: 'SQL', value: sql_l },
+          { x: 'PHP', value: php_l }
         ];
 
         // соедините данные, создав серию столбцов

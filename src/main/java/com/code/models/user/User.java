@@ -11,6 +11,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     /*Profile*/
+    private String name;
+    private String lastname;
     private String username;
     private String password;
     private boolean active;
@@ -29,8 +31,18 @@ public class User {
 
     /*skills*/
     private int htmlSkill = 0;
+    private int cssSkill = 0;
     private int javaScriptSkill= 0;
+    private int cppSkill = 0;
+    private int pythonSkill = 0;
     private int javaSkill = 0;
+    private int csharpSkill = 0;
+    private int kotlinSkill = 0;
+    private int swiftSkill = 0;
+    private int cSkill = 0;
+    private int algorithmsSkill = 0;
+    private int sqlSkill = 0;
+    private int phpSkill = 0;
     /*=============== CONSTRUCTORS ===============*/
     public User() {}
 
@@ -59,6 +71,54 @@ public class User {
     public int getHtmlSkill() { return htmlSkill; }
     public int getJavaScriptSkill() { return javaScriptSkill; }
     public int getJavaSkill() { return javaSkill; }
+    public int getCssSkill() {
+        return cssSkill;
+    }
+
+    public int getCppSkill() {
+        return cppSkill;
+    }
+
+    public int getPythonSkill() {
+        return pythonSkill;
+    }
+
+    public int getCsharpSkill() {
+        return csharpSkill;
+    }
+
+    public int getKotlinSkill() {
+        return kotlinSkill;
+    }
+
+    public int getSwiftSkill() {
+        return swiftSkill;
+    }
+
+    public int getcSkill() {
+        return cSkill;
+    }
+
+    public int getAlgorithmsSkill() {
+        return algorithmsSkill;
+    }
+
+    public int getSqlSkill() {
+        return sqlSkill;
+    }
+
+    public int getPhpSkill() {
+        return phpSkill;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
     /*=============== SETTERS ===============*/
     public void setId(Long id) { this.id = id; }
     public void setUsername(String username) { this.username = username; }
@@ -73,4 +133,52 @@ public class User {
     public void setHtmlSkill(int htmlSkill) { this.htmlSkill = htmlSkill; }
     public void setJavaScriptSkill(int javaScriptSkill) { this.javaScriptSkill = javaScriptSkill; }
     public void setJavaSkill(int javaSkill) { this.javaSkill =javaSkill; }
+
+    public void setCssSkill(int cssSkill) {
+        this.cssSkill = cssSkill;
+    }
+
+    public void setCppSkill(int cppSkill) {
+        this.cppSkill = cppSkill;
+    }
+
+    public void setPythonSkill(int pythonSkill) {
+        this.pythonSkill = pythonSkill;
+    }
+
+    public void setCsharpSkill(int csharpSkill) {
+        this.csharpSkill = csharpSkill;
+    }
+
+    public void setKotlinSkill(int kotlinSkill) {
+        this.kotlinSkill = kotlinSkill;
+    }
+
+    public void setSwiftSkill(int swiftSkill) {
+        this.swiftSkill = swiftSkill;
+    }
+
+    public void setcSkill(int cSkill) {
+        this.cSkill = cSkill;
+    }
+
+    public void setAlgorithmsSkill(int algorithmsSkill) {
+        this.algorithmsSkill = algorithmsSkill;
+    }
+
+    public void setSqlSkill(int sqlSkill) {
+        this.sqlSkill = sqlSkill;
+    }
+
+    public void setPhpSkill(int phpSkill) {
+        this.phpSkill = phpSkill;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 }
