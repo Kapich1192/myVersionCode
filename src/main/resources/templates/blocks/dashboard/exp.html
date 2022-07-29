@@ -1,10 +1,21 @@
 <div th:fragment="exp">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <h2 class="display-4">Опыт</h2>
-    <hr>
-    <p class="lead">
-      Твой опыт показывает насколько далеко ты продвинулся в своем обучении
-    </p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h2 class="display-4">Опыт</h2>
+        <hr>
+        <p class="lead">
+          Твой опыт показывает насколько далеко ты продвинулся в своем обучении
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 shadow-lg p-3 mb-5 bg-body border rounded-5">
+        <img src="img/users/unknown.jpg" class="border rounded-5" style="height: 250px;">
+        <hr>
+        <h3>email: [[${user_email}]]</h3>
+        <h3>tel: [[${user_tel}]]</h3>
+        <h3>Peer points: [[${peer_points}]]</h3>
+      </div>
+    </div>
     <h5>Java Developer</h5>
     <p>Level: 1</p>
     <div class="progress">

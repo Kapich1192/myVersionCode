@@ -2,7 +2,8 @@
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
       <h2 class="display-4">Диаграмма навыков</h2>
       <br>
-      <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
+      <p class="lead">
+        Данная диаграмма показывает твой прогресс в обучении.
         Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
 
       </p>
@@ -11,7 +12,60 @@
         <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
         <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
       </ul>
-      <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-        из них уже получили предложения о постоянной работе.</p>
+      <p class="lead">
+        Все твои навыки и статистика по проектам, квестам и задачам отображаются в твоем профиле и сертификате.
+      </p>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center" id="container" style="height: 450px;">
+
+        <script th:inline="javascript">
+      anychart.onDocumentReady(function () {
+
+        // создайте полярную диаграмму
+        var chart = anychart.polar();
+        // variables
+        var html_l = [[${html_level}]];
+        var java_l = [[${java_level}]];
+        var js_l = [[${js_level}]];
+
+        // добавление данных в виде массива объектов
+        var data = [
+          { x: 'HTML', value: html_l },
+          { x: 'CSS', value: 36.1 },
+          { x: 'JS', value: js_l },
+          { x: 'C++', value: 25 },
+          { x: 'Python', value: 24.1 },
+          { x: 'Java', value: java_l },
+          { x: 'C#', value: 20.3 },
+          { x: 'Kotlin', value: 19.8 },
+          { x: 'Swift', value: 18.7 },
+          { x: 'C', value: 11.8 },
+          { x: 'Algoritms', value: 10.58 },
+          { x: 'SQL', value: 9.28 },
+          { x: 'Backend', value: 9.22 },
+          { x: 'Frontend', value: 7.18 },
+          { x: 'Security', value: 7.4 }
+        ];
+
+        // соедините данные, создав серию столбцов
+        var columnSeries = chart.column(data);
+
+        // установите шкалу x
+        chart.xScale('ordinal');
+
+        // отключите ось y
+        chart.yAxis(true);
+
+
+        // set the chart container id
+        chart.container('container');
+
+        // установите идентификатор контейнера диаграммы
+        chart.draw();
+
+      });
+    </script>
+  </div>
+
 </div>
