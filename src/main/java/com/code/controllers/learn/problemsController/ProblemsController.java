@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ProblemsController {
     @GetMapping("/problems")
     public String getProblems(Model model) {
-        return "pages/system/pageDevelopment";
+        return "pages/problems/problems";
     }
 }

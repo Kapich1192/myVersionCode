@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PeerToPeerController {
     @GetMapping("/peer_to_peer")
     public String getPeerToPeer(Model model) {
-        return "pages/system/pageDevelopment";
+        return "pages/peer_to_peer/peer_to_peer";
     }
 }

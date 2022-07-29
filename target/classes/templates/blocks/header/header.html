@@ -38,10 +38,11 @@
 
                             <div class="dropdown-toggle  rounded-1 " id="learn" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
                                 <span class="sr-only">Learning</span>
-                                <span class="pe-icon pe-7s-study icon" data-toggle="tooltip" data-placement="bottom" title="Учеба" style="font-size: 40px;"></span>
+                                <span class="pe-icon pe-7s-study icon" data-toggle="tooltip" data-placement="bottom" title="Learning" style="font-size: 40px;"></span>
                             </div>
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="learn" style="width: 100px;">
+                                <li><a class="dropdown-item rounded-2" href="/current_lecture"><i class="pe-icon pe-7s-tools"></i>    Current lecture</a></li>
                                 <li><a class="dropdown-item rounded-2" href="/learn_action"><i class="pe-icon pe-7s-tools"></i>    Learn action</a></li>
                                 <li><a class="dropdown-item rounded-2" href="/learn_map"><i class="pe-icon pe-7s-graph1"></i>    Learn Map</a></li>
                                 <li><a class="dropdown-item rounded-2" href="/peer_to_peer"><i class="pe-icon pe-7s-id"></i>    Peer to Peer</a></li>
@@ -60,9 +61,9 @@
 
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="progress" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-science"></i>    Tribe tournament</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-rocket"></i>    Tasks progress</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-medal"></i>    Points</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/tribe_tournament"><i class="pe-icon pe-7s-science"></i>    Tribe tournament</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/tasks_progress"><i class="pe-icon pe-7s-rocket"></i>    Tasks progress</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/points"><i class="pe-icon pe-7s-medal"></i>    Points</a></li>
                             </ul>
 
                         </div>
@@ -76,8 +77,8 @@
                             </div>
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="projects" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Current project</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Project map</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/current_project"><i class="pe-icon pe-7s-tools"></i>    Current project</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/project_map"><i class="pe-icon pe-7s-graph1"></i>    Project map</a></li>
                             </ul>
 
                         </div>
@@ -93,11 +94,8 @@
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="inters" style="width: 100px;">
                                 <li><a class="dropdown-item rounded-2" href="/news"><i class="pe-icon pe-7s-tools"></i>    News</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Posts</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Hackatons</a></li>
-
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item rounded-2" href="/logout"><i class="pe-icon pe-7s-settings"></i>    Выйти</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/posts"><i class="pe-icon pe-7s-graph1"></i>    Posts</a></li>
+                                <li><a class="dropdown-item rounded-2" href="/hackathons"><i class="pe-icon pe-7s-id"></i>    Hackathons</a></li>
                             </ul>
 
                         </div>
@@ -115,14 +113,14 @@
 
 
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="dropdownMenu-notifications" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Настройки</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Резюме</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Профиль</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Карьера</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Вакансии</a></li>
-                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Стажировка</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-tools"></i>    Setting</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-graph1"></i>    Resume</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-id"></i>    Profile</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Career</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Vacancy</a></li>
+                                <li><a class="dropdown-item rounded-2" href="#"><i class="pe-icon pe-7s-way"></i>    Internship</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item rounded-2" href="/logout"><form th:action="@{/logout}" method="post"><input type="submit" value="Выйти" class="btn btn-light"></form></a></li>
+                                <li><a class="dropdown-item rounded-2" href="/logout"><form th:action="@{/logout}" method="post"><input type="submit" value="Sign out" class="btn btn-light"></form></a></li>
                             </ul>
 
                         </div>
@@ -143,35 +141,35 @@
                     <!-- Messeges-->
                     <li class=" rounded-5">
                         <a href="/messages" target="_self">
-                            <span class="pe-icon pe-7s-chat icon" data-toggle="tooltip" data-placement="bottom" title="Чат" data-original-title="Чат"></span>
+                            <span class="pe-icon pe-7s-chat icon" data-toggle="tooltip" data-placement="bottom" title="Chat" data-original-title="Чат"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Video -->
                     <li class="  rounded-5">
                         <a href="/video" target="_self">
-                            <span class="pe-icon pe-7s-film icon" data-toggle="tooltip" data-placement="bottom" title="Видео" data-original-title="Видео"></span>
+                            <span class="pe-icon pe-7s-film icon" data-toggle="tooltip" data-placement="bottom" title="Video" data-original-title="Видео"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Tape -->
                     <li class="  rounded-5">
                         <a href="/tape" target="_self">
-                            <span class="pe-icon pe-7s-news-paper icon" data-toggle="tooltip" data-placement="bottom" title="Лента" data-original-title="Лента"></span>
+                            <span class="pe-icon pe-7s-news-paper icon" data-toggle="tooltip" data-placement="bottom" title="Tape" data-original-title="Лента"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Музыка pe-7s-music-->
                     <li class="  rounded-5">
                         <a href="/music" target="_self">
-                            <span class="pe-icon pe-7s-music icon" data-toggle="tooltip" data-placement="bottom" title="Музыка" data-original-title="Музыка"></span>
+                            <span class="pe-icon pe-7s-music icon" data-toggle="tooltip" data-placement="bottom" title="Music" data-original-title="Музыка"></span>
                         </a>
                     </li>
                     <br>
                     <!-- Портфолио pe-7s-portfolio-->
                     <li class="  rounded-5">
                         <a href="/portfolio" target="_self">
-                            <span class="pe-icon pe-7s-portfolio icon" data-toggle="tooltip" data-placement="bottom" title="Портфолио" data-original-title="Портфолио"></span>
+                            <span class="pe-icon pe-7s-portfolio icon" data-toggle="tooltip" data-placement="bottom" title="Portfolio" data-original-title="Портфолио"></span>
                         </a>
                     </li>
                     <br>
@@ -185,7 +183,7 @@
                     <!-- Команда pe-7s-users-->
                     <li class="  rounded-5">
                         <a href="/team" target="_self">
-                            <span class="pe-icon pe-7s-users icon" data-toggle="tooltip" data-placement="bottom" title="Команда" data-original-title="Команда"></span>
+                            <span class="pe-icon pe-7s-users icon" data-toggle="tooltip" data-placement="bottom" title="Team" data-original-title="Команда"></span>
                         </a>
                     </li>
                     <br>
