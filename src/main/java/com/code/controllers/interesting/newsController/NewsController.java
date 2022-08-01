@@ -37,6 +37,9 @@ public class NewsController {
         ArrayList<Article> res = new ArrayList<>();
         article.ifPresent(res::add);
         model.addAttribute("article",res);
+
+        Iterable<Article> articles = articleRepository.findAll();
+        model.addAttribute("articles",articles);
         return "pages/news/article";
     }
     /*POST*/

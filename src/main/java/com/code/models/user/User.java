@@ -6,7 +6,7 @@ import java.util.Set;
 @Entity
 @Table(name = "usr")
 public class User {
-    /*=============== FIELDS ===============*/
+    /*============================================ FIELDS ============================================================*/
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -43,7 +43,10 @@ public class User {
     private int algorithmsSkill = 0;
     private int sqlSkill = 0;
     private int phpSkill = 0;
-    /*=============== CONSTRUCTORS ===============*/
+    /*learning and projects*/
+    private Long currentLectureId = 0l;
+
+    /*============================== CONSTRUCTORS ====================================================================*/
     public User() {}
 
     public User(Long id, String username, String password) {
@@ -57,7 +60,7 @@ public class User {
         this.password = password;
     }
 
-    /*=============== GETTERS ===============*/
+    /*============================================== GETTERS =========================================================*/
     public Long getId() { return id; }
     public String getUsername() { return username; }
     public String getPassword() { return password; }
@@ -71,55 +74,19 @@ public class User {
     public int getHtmlSkill() { return htmlSkill; }
     public int getJavaScriptSkill() { return javaScriptSkill; }
     public int getJavaSkill() { return javaSkill; }
-    public int getCssSkill() {
-        return cssSkill;
-    }
-
-    public int getCppSkill() {
-        return cppSkill;
-    }
-
-    public int getPythonSkill() {
-        return pythonSkill;
-    }
-
-    public int getCsharpSkill() {
-        return csharpSkill;
-    }
-
-    public int getKotlinSkill() {
-        return kotlinSkill;
-    }
-
-    public int getSwiftSkill() {
-        return swiftSkill;
-    }
-
-    public int getcSkill() {
-        return cSkill;
-    }
-
-    public int getAlgorithmsSkill() {
-        return algorithmsSkill;
-    }
-
-    public int getSqlSkill() {
-        return sqlSkill;
-    }
-
-    public int getPhpSkill() {
-        return phpSkill;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    /*=============== SETTERS ===============*/
+    public int getCssSkill() { return cssSkill; }
+    public int getCppSkill() { return cppSkill; }
+    public int getPythonSkill() { return pythonSkill; }
+    public int getCsharpSkill() { return csharpSkill; }
+    public int getKotlinSkill() { return kotlinSkill; }
+    public int getSwiftSkill() { return swiftSkill; }
+    public int getcSkill() { return cSkill; }
+    public int getAlgorithmsSkill() { return algorithmsSkill; }
+    public int getSqlSkill() { return sqlSkill; }
+    public int getPhpSkill() { return phpSkill; }
+    public String getName() { return name; }
+    public String getLastname() { return lastname; }
+    /*============================================== SETTERS =========================================================*/
     public void setId(Long id) { this.id = id; }
     public void setUsername(String username) { this.username = username; }
     public void setPassword(String password) { this.password = password; }
@@ -133,52 +100,50 @@ public class User {
     public void setHtmlSkill(int htmlSkill) { this.htmlSkill = htmlSkill; }
     public void setJavaScriptSkill(int javaScriptSkill) { this.javaScriptSkill = javaScriptSkill; }
     public void setJavaSkill(int javaSkill) { this.javaSkill =javaSkill; }
-
-    public void setCssSkill(int cssSkill) {
-        this.cssSkill = cssSkill;
+    public void setCssSkill(int cssSkill) { this.cssSkill = cssSkill; }
+    public void setCppSkill(int cppSkill) { this.cppSkill = cppSkill; }
+    public void setPythonSkill(int pythonSkill) { this.pythonSkill = pythonSkill; }
+    public void setCsharpSkill(int csharpSkill) { this.csharpSkill = csharpSkill; }
+    public void setKotlinSkill(int kotlinSkill) { this.kotlinSkill = kotlinSkill; }
+    public void setSwiftSkill(int swiftSkill) { this.swiftSkill = swiftSkill; }
+    public void setcSkill(int cSkill) { this.cSkill = cSkill; }
+    public void setAlgorithmsSkill(int algorithmsSkill) { this.algorithmsSkill = algorithmsSkill; }
+    public void setSqlSkill(int sqlSkill) { this.sqlSkill = sqlSkill; }
+    public void setPhpSkill(int phpSkill) { this.phpSkill = phpSkill; }
+    public void setName(String name) { this.name = name; }
+    public void setLastname(String lastname) { this.lastname = lastname; }
+    public void setCurrentLectureId(Long currentLectureId) { this.currentLectureId = currentLectureId; }
+    /*================================================= SYSTEM =======================================================*/
+    /*================================================= SYSTEM =======================================================*/
+    /*toString*/
+    /*hashCode*/
+    /*equals*/
+    /*initialize*/
+    /*================================================= STATIC METHODS ===============================================*/
+    /*================================================= METHODS CLASS ================================================*/
+    /*peer points down*/
+    public void peerPointsDown() {
+        peerPoints--;
     }
-
-    public void setCppSkill(int cppSkill) {
-        this.cppSkill = cppSkill;
+    /*peer points upp*/
+    public void peerPointsUpp() {
+        peerPoints++;
     }
-
-    public void setPythonSkill(int pythonSkill) {
-        this.pythonSkill = pythonSkill;
+    /*check experience*/
+    public void checkExp() {
+        if (level % 2 == 1) {
+            if (experience > 500) {
+                levelUp();
+            }
+        } else {
+            if (experience > 1000) {
+                levelUp();
+            }
+        }
     }
-
-    public void setCsharpSkill(int csharpSkill) {
-        this.csharpSkill = csharpSkill;
-    }
-
-    public void setKotlinSkill(int kotlinSkill) {
-        this.kotlinSkill = kotlinSkill;
-    }
-
-    public void setSwiftSkill(int swiftSkill) {
-        this.swiftSkill = swiftSkill;
-    }
-
-    public void setcSkill(int cSkill) {
-        this.cSkill = cSkill;
-    }
-
-    public void setAlgorithmsSkill(int algorithmsSkill) {
-        this.algorithmsSkill = algorithmsSkill;
-    }
-
-    public void setSqlSkill(int sqlSkill) {
-        this.sqlSkill = sqlSkill;
-    }
-
-    public void setPhpSkill(int phpSkill) {
-        this.phpSkill = phpSkill;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    /*level up*/
+    public void levelUp() {
+        level++;
+        experience = 0;
     }
 }

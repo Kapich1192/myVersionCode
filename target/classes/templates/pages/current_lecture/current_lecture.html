@@ -17,113 +17,104 @@
     <!--================================ Content  ==================================-->
     <div class="bg-light">
         <div class="container-fluid border" style="padding: 50px 50px 0 100px">
-
-            <!--Fragment -->
             <div class="row shadow-lg p-3 mb-5 bg-body border rounded-5">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="display-4">Опыт</h2>
-                    <hr>
-                    <p class="lead">
-                        Твой опыт показывает насколько далеко ты продвинулся в своем обучении
-                    </p>
-                    <h5>Java Developer</h5>
-                    <p>Level: 1</p>
-                    <div class="progress">
-
-                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" title="level"><p style="color: white;">67%</p></div>
-                    </div>
-                </div>
-            </div>
+            <!-- Right -->
+                <div class="col-8">
             <!--Fragment -->
-            <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  shadow-lg p-3 mb-5 bg-body border rounded-5 " >
-            <h2 class="display-4">Турнир трайбов</h2>
-            <br>
-            <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
-                Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
-
-            </p>
-            <ul>
-                <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
-                <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
-                <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
-            </ul>
-            <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-                из них уже получили предложения о постоянной работе.</p>
-        </div>
-
-        <div class="col-md-1 col-lg-1 col-xl-1"></div>
-
-        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  shadow-lg p-3 mb-5 bg-body border rounded-5">
-            <h2 class="display-4">События</h2>
-            <br>
-            <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
-                Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
-
-            </p>
-            <ul>
-                <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
-                <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
-                <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
-            </ul>
-            <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-                из них уже получили предложения о постоянной работе.</p>
-        </div>
-    </div>
+            <div class="row shadow-lg p-3 mb-5 bg-dark border rounded-5 opacity-75">
+                    <form id="message" class="main-search " action="/messages" method="post">
+                        <div id="main-message-input-wrapper" class="main-search-input-wrapper " style="display: block;">
+                            <div class="row">
+                                <div class="col-10" ><input type="text" class="input main-search-input form-control rounded-5" name="q"
+                                                            value placeholder="Link your git repository for check"></div>
+                                <div class="col-2"><button class="btn btn-success rounded-5"><i class="pe-icon pe-7s-paper-plane icon" ></i></button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             <!--Fragment -->
             <div class="row shadow-lg p-3 mb-5 bg-body border rounded-5">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h2 class="display-4">Диаграмма навыков</h2>
-                    <br>
-                    <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
-                        Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
+                    <div th:each="el : ${lec}">
+                        <h1 th:text="${el.title}"></h1>
+                        <p th:text="${ff}"></p>
+                        <div th:insert="'blocks/lectures/'+${el.title}+'/'+${el.title} :: ${el.title}"></div>
+                    </div>
 
-                    </p>
-                    <ul>
-                        <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
-                        <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
-                        <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
-                    </ul>
-                    <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-                        из них уже получили предложения о постоянной работе.</p>
+                 </div>
+            </div>
+            <!-- Tasks -->
+            <div class="row shadow-lg p-3 mb-5 bg-body border rounded-5 opacity-75">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed border rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p class="lead">Task #1</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header " id="flush-headingTwo">
+                            <button class="accordion-button collapsed border rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p class="lead">Task #2</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed border rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p class="lead">Task #3</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--Fragment -->
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  shadow-lg p-3 mb-5 bg-body border rounded-5" >
-                    <h2 class="display-4">Достижения</h2>
+            <!-- Video -->
+            <div class="row shadow-lg p-3 mb-5 bg-body border rounded-5 text-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h2 class="display-4">Video to lecture</h2>
                     <br>
-                    <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
-                        Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 shadow-lg p-3 mb-5 bg-body border rounded-5">
+                        <iframe width="640" height="480"
+                                src="https://www.youtube.com/embed/QLhqYNsPIVo"
+                                title="This lecture"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
 
-                    </p>
-                    <ul>
-                        <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
-                        <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
-                        <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
-                    </ul>
-                    <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-                        из них уже получили предложения о постоянной работе.</p>
                 </div>
+            </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 ">
+                    <div class="row shadow-lg bg-body border rounded-5">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <h2 class="display-4">Диаграмма навыков</h2>
+                            <br>
+                            <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
+                                Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
 
-                <div class="col-md-1 col-lg-1 col-xl-1"></div>
-
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  shadow-lg p-3 mb-5 bg-body border rounded-5">
-                    <h2 class="display-4">Лента</h2>
-                    <br>
-                    <p class="lead"> Данная диаграмма показывает твой прогресс в обучении.
-                        Внимательно следи за ее изменениями. Не хватайся за все темы подряд.
-
-                    </p>
-                    <ul>
-                        <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
-                        <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
-                        <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
-                    </ul>
-                    <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
-                        из них уже получили предложения о постоянной работе.</p>
+                            </p>
+                            <ul>
+                                <li><strong>Помни, что если твоя учебная активность будет низкая навыки будут падать</strong></li>
+                                <li><strong>Если твоя учебная активность за 3 месяца будет равна нулю твой профиль будет удален, а диаграмма обнулена</strong></li>
+                                <li><strong>Чтобы зафиксировать свой прогресс, тебе нужно пройти все дерево по специализации</strong></li>
+                            </ul>
+                            <p class="lead">На стажировку выходят 100% участников Школы 21, и 95%
+                                из них уже получили предложения о постоянной работе.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -35,14 +35,14 @@
             <div class="col-8">
                 <div class="shadow-lg p-3 mb-5 bg-body border rounded-5" >
                     <!-- start news-->
-                    <div class="col-md-6 box-shadow" th:each="el : ${article}">
-                        <div class="card mb-4 box-shadow">
+                    <div th:each="el : ${article}">
+
                             <img class="card-img-top"  data-src="../img/news/title.jpg" alt="../img/news/title.jpg" style="height: 225px; width: 100%; display: block;" src="../img/news/title.jpg" data-holder-rendered="true">
                             <div class="card-body">
                                 <h3 th:text="${el.title}"></h3>
+                                <hr>
                                 <p class="card-text" th:text="${el.full_text}"></p>
                             </div>
-                        </div>
                         <!-- end news-->
                     </div>
                 </div>
@@ -50,8 +50,8 @@
             <!-- end news-->
             <div class="col-1"></div>
             <!-- end news-->
-            <div class="col-3 shadow-lg p-3 mb-5 bg-body border rounded-5">
-                <p>Site bar fghjkfkfkfkufkf<p>
+            <div th:insert="blocks/dashboard/events" class="col-3 shadow-lg p-3 mb-5 bg-body border rounded-5">
+
             </div>
             <!-- end news-->
         </div>

@@ -1,18 +1,26 @@
 <div th:fragment="events">
   <h2 class="display-4">События</h2>
   <br>
-  <div th:each="el : ${articles}">
-  <div class="d-flex text-muted pt-3">
+  <div  th:each="el : ${articles}">
+  <div class="d-flex text-muted pt-3 toast mb-2 rounded-5">
     <a th:href="'/news/' + ${el.id}" class="container">
   <!--
       <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"></rect><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
 -->
-      <img src="img/logo/logo.svg" class="border rounded-2" width="32" height="32">
-    <p class="pb-3 mb-0 small lh-sm border-bottom">
-      <strong class="d-block text-gray-dark">@[[${el.author}]]</strong>
-      <strong class="d-block text-gray-dark">[[${el.title}]]</strong>
-      [[${el.anons}]]
-    </p></a>
+      <div class="toast-header">
+        <img src="img/logo/logo.svg" class="rounded me-2 border rounded-2" alt="..." width="32" height="32">
+        <strong class="me-auto">@[[${el.author}]]</strong>
+        <small>11 мин. назад</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+
+      <div class="toast-body">
+      <p class="pb-3 mb-0 small lh-sm border-bottom">
+         <strong class="d-block text-gray-dark">[[${el.title}]]</strong>
+          [[${el.anons}]]
+      </p>
+      </div>
+    </a>
   </div>
   </div>
 

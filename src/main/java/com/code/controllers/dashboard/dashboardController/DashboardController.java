@@ -30,14 +30,6 @@ public class DashboardController {
         Object principal = auth.getPrincipal();
         User user = userRepo.findByUsername(auth.getName());
         model.addAttribute("users",user);
-        /*Level*/
-        model.addAttribute("user_level",user.getLevel());
-        model.addAttribute("user_exp", user.getExperience());
-        /*Info*/
-        model.addAttribute("user_email", user.getEmail());
-        model.addAttribute("user_tel", user.getTel());
-        /*Points*/
-        model.addAttribute("peer_points",user.getPeerPoints());
         /*=============== News ======================*/
         Iterable<Article> articles = articleRepo.findAll();
         model.addAttribute("articles",articles);

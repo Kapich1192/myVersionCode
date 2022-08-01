@@ -10,7 +10,7 @@ public class MessangerController {
     public String getMessages(Model model) {
         /*Meta*/
         model.addAttribute("title", "Sbergram Web");
-        return "pages/messenger/messenger";
+        return "pages/messanger/messanger";
     }
 
 }

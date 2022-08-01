@@ -1,37 +1,40 @@
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-md navbar-green bg-dark sticky-top">
-        <div class="container-fluid">
-            <a href="/" class="navbar-brad"><img src="img/logo/logo.svg"></a>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li>
-                        <div class="dropdown">
-                            <a class="btn btn-outline-success" type="button" href="/registration" >
-                                Подать заявку
-                            </a>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="dropdown">
-                            <a class="btn btn-secondary" href="/dashboard" type="button"  >
-                                Личный кабинет
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
+    <header class="header bg-light ">
+        <div class="branding float-left bg-dark rounded-start rounded-5 opacity-75">
+            <h1 class="logo text-center">
+                <a href="/dashboard">
+                    <img class="logo-icon" width="100" height="100" src="img/logo/logo.svg" alt="icon">
+                    <span class="nav-label" >Online</span>
+                </a>
+            </h1>
         </div>
-    </nav>
+
+        <div class="topbar">
+
+
+
+            <div class="navbar-tools">
+
+                <div class="utilities-container">
+                    <div class="utilities">
+                        <!-- Dashboard -->
+                        <div class="item item-notifications">
+                            <div class="rounded-1 " id="home" aria-expanded="false" role="button" >
+                                <a href="/dashboard">
+                                    <button class="btn btn-success">Login</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
 </div>
 <div th:fragment="header_top">
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container-fluid">
+        <div class="row">
             <div class="collapse navbar-collapse" id="navbarResponsiv">
                 <ul class="navbar-nav ml-auto">
                     <li><a class="btn btn-light" href="#info">что вы получаете</a></li>

@@ -1,237 +1,206 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+    <head>
     <meta charset="UTF-8">
-    <title>Code</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/main.css">
-
+    <title>School21 online</title>
+        <!-- CSS only -->
+        <div th:insert="blocks/sys/css :: css"></div>
 </head>
-<body>
-<!-- header -->
-    <div th:insert="blocks/header/headerHome :: header"></div>
-    <div th:insert="blocks/header/headerHome :: header_top" class="sticky-top"></div>
-<!-- slider hero -->
-    <div th:insert="blocks/home/slider:: slider"></div>
+    <body class="bg-light">
+    <!--================================ Navigation ==================================-->
 
-<!-- info -->
-    <section th:insert="blocks/home/info :: info_home" class="info container-fluid"></section>
-
-
-<!-- skills -->
-    <section class="skills">
-        <div class="container">
-            <div class="skills__wrapper">
-                <h2 class="skills__title title"> Вы сможете изучить </h2>
-            <div class="skills__box">
-                <div class="skills__name">
-                    Основные направления
-                </div>
-                <div class="skills__inner swiper-wrapper">
-<!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Мобильная разработка (Kotlin, Swift)</p>
-                    </div>
-                    <!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Мобильная разработка (Kotlin, Swift)</p>
-                    </div>
-                    <!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Мобильная разработка (Kotlin, Swift)</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Мобильная разработка (Kotlin, Swift)</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Мобильная разработка (Kotlin, Swift)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="skills__box">
-                <div class="skills__name">
-                    Основные направления
-                </div>
-                <div class="skills__inner">
-                    <!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item">C</p>
-                    </div>
-                    <!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> C++</p>
-                    </div>
-                    <!--                    skills-->
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> С#</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item">Java</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> GO</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Swift</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Python</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> SQL</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> JavaScript</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> Kotlin</p>
-                    </div>
-                    <div class="skills-tooltip">
-                        <p class="skills__item"> TS</p>
-                    </div>
-            </div>
-            </div>
+        <div class="sticky-top">
+            <!--Fragment Header-->
+            <div th:insert="blocks/header/headerHome :: header" ></div>
+            <div th:insert="blocks/header/headerHome :: header_top"></div>
         </div>
-        </div>
+    <!--================================ Content  ==================================-->
+    <!-- Hero -->
+    <section id="hero">
+            <div class="row">
+                <div class="col-6 mb-5 p-5">
+                    <h1 class="display-1">
+                        Школа 21
+                    </h1>
+                    <h4>
+                        программирование с нуля для тех, кто хочет
+                    </h4>
+                    <h4>
+                        Сменить профессию | Найти себя в ИТ | Получить практические знания
+                    </h4>
+                    <button class="btn btn-success">
+                        Хочу поступить
+                    </button>
+
+                    <ul>
+                        <li>Без менторов, лекций и оценок</li>
+                        <li>Free</li>
+                        <li>Индивидуальный график</li>
+                        <li>Online</li>
+                        <li>Peer to peer</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <img src="img/slides/1.jpeg" height="650px">
+                </div>
+            </div>
     </section>
-<!--principles-->
-    <section class="principles">
-        <div class="container">
-            <h2 class="principles__title title">Принципы обучения</h2>
-            <div class="principles__inner">
-                <div class="principles__item principles-item">
-                    <div class="principles-item__title">
-                        Нет расписания, оценок и менторов
-                    </div>
-                    <p class="principles-item__text">
-                        Ты самостоятельно планируешь день, управляешь свободным временем, чтобы вовремя сдать проекты и проверить работы других участников. Мы ставим дедлайны, даём рабочее место с Mac и удобный кампус, который <span>открыт 24/7</span>. Всё остальное — в твоих руках.
-                    </p>
-                </div>
-                <div class="principles__item principles-item">
-                    <div class="principles-item__title">
-                        Метод
-                        Peer-to-Peer
-                    </div>
-                    <p class="principles-item__text">
-                        Обычных уроков и лекций не будет. Вместо этого — методика peer-to-peer (P2P), по которой каждый учится у каждого. У всех участников разный бэкграунд и свой темп в обучении. <span>Работай в команде</span>, делись знаниями и получай опыт от таких же, как ты. Все участники равны.
-                    </p>
-                </div>
-                <div class="principles__item principles-item">
-                    <div class="principles-item__title">
-                        Геймификация
-                    </div>
-                    <p class="principles-item__text">
-                        Выполняй задания и получай очки опыта,<span> прокачивай навыки и двигайся вперёд</span> — уровень за уровнем. Участвуй в жизни Школы и получай награды, за проверки других участников — очки. Свои результаты можно сравнить с итогами других участников, чтобы понять точки роста и мобилизоваться.
-                    </p>
-                </div>
+    <!--Что вы получаете? -->
+    <section class="bg-dark opacity-75">
+        <row class="p-3 mb-5">
+            <h2 class="display-2" style="color: white;">Что вы получаете</h2>
+        </row>
+    </section>
+    <!--Вы сможете изучить -->
+    <section class="bg-light ">
+        <row class="p-3 mb-5">
+            <h2 class="display-2" >Вы сможете изучить</h2>
+        </row>
+    </section>
+    <!--Принципы обучения -->
+    <section class="bg-dark opacity-75">
+        <row class="p-3 mb-5">
+            <h2 class="display-2" style="color: white;">Принципы обучения</h2>
+        </row>
+    </section>
+    <!--Как проходит обучение -->
+    <section class="bg-light">
+        <row class="p-3 mb-5">
+            <h2 class="display-2" >Как проходит обучение</h2>
+        </row>
+    </section>
+    <!--Трудоустройство -->
+    <section class="bg-light ">
+        <div class="row">
+            <div class="col-6 mb-5 p-5">
+                <h2 class="display-1">
+                    Трудоустройство
+                </h2>
+                <h4>
+                    программирование с нуля для тех, кто хочет
+                </h4>
+                <h4>
+                    Сменить профессию | Найти себя в ИТ | Получить практические знания
+                </h4>
+                <button class="btn btn-success">
+                    Хочу поступить
+                </button>
+
+                <ul>
+                    <li>Без менторов, лекций и оценок</li>
+                    <li>Free</li>
+                    <li>Индивидуальный график</li>
+                    <li>Online</li>
+                    <li>Peer to peer</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="img/slides/1.jpeg" height="650px">
             </div>
         </div>
     </section>
-<!-- step-skills -->
-    <section class="process">
-        <div class="container">
-            <h2 class="process__title title">Как проходит обучение</h2>
-            <div class="process__inner">
-                <div class="process__top">
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                        <div class="process-name__icon lazy"></div>
-                        <div class="process-name__title"> Тест на память и логику </div>
-                        </div>
-                        <div class="process-item__description">
-                            2 мини-игры онлайн — надо понять правила и заработать максимум баллов <br>~30 минут
-                        </div>
-                    </div>
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                            <div class="process-name__icon lazy"></div>
-                            <div class="process-name__title"> Встреча с командой Школы 21 </div>
-                        </div>
-                        <div class="process-item__description">
-                            Расскажем все об обучении. Ответим на любые вопросы. Развеем все сомнения. Встреча проходит в формате вебинара. <br>~1 час
-                        </div>
-                    </div>
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                            <div class="process-name__icon lazy"></div>
-                            <div class="process-name__title"> Интенсив </div>
-                        </div>
-                        <div class="process-item__description">
-                            Непрерывная учёба в кампусе. Советуем отложить все дела или взять отпуск. 22 проекта, чтобы освоиться в Школе 21 <br>26 дней
-                        </div>
-                    </div>
-                </div>
-                <div class="process__bottom">
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                            <div class="process-name__icon lazy"></div>
-                            <div class="process-name__title"> Alumni-комьюнити </div>
-                        </div>
-                        <div class="process-item__description">
-                            Выпускники Школы 21 поддерживают связь друг с другом даже после окончания учёбы: обмениваются опытом, делятся новостями IT, помогают с работой и на проектах. Стань частью сообщества                        </div>
-                    </div>
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                            <div class="process-name__icon lazy"></div>
-                            <div class="process-name__title"> Сертификат <br>Школы 21 </div>
-                        </div>
-                        <div class="process-item__description">
-                            Участники получают сертификат базового или продвинутого уровня, который подтверждает практические навыки в программировании.
-                        </div>
-                    </div>
-                    <div class="process__item process-item">
-                        <div class="process-item__top">
-                            Вступительные этапы
-                        </div>
-                        <div class="process-item__name process-name">
-                            <div class="process-name__icon lazy"></div>
-                            <div class="process-name__title"> Основное обучение
+    <!-- Хочу поступить -->
+    <section class="bg-light ">
+        <row class="p-3 mb-5">
+            <h2 class="display-2">Хочу поступить</h2>
+        </row>
+    </section>
+    <!-- FAQ -->
+    <section id="faq">
+        <!-- Level 2 -->
+        <div class="tab-pane" id="level_2">
+            <div class="row shadow-lg p-3 mb-5 bg-body ">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="display-1">FAQ</h2>
+                    <hr>
+                    <!-- Projects -->
+                    <div class="row shadow-lg p-3 mb-5 bg-body border">
+
+                        <div class="accordion accordion-flush" id="accordionFlush_LEVEL_2">
+                            <!-- Ask #1-->
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="flush-heading_2_1">
+                                    <button class="accordion-button collapsed "
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#pr_1"
+                                            aria-expanded="false"
+                                            aria-controls="pr_1">
+                                        <p class="lead">
+                                            Как выглядит процесс обучения в Школе 21?
+                                        </p>
+                                    </button>
+                                </h2>
+
+                                <div id="pr_1"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingOne"
+                                     data-bs-parent="#accordionFlushExample">
+
+                                    <div class="accordion-body">
+                                        Итак, вы успешно прошли интенсив и зачислены на основное обучение. Что вас ждет? В первые 12-15 месяцев
+                                        вам будут доступны проекты следующих направлений: структурное программирование (С),
+                                        объектно-ориентированное программирование (С++), компьютерные сети, алгоритмы, базы данных(SQL)
+                                        и прикладное программирование (java, Python, Golang, C#)
+                                        После чего наступает время стажировки, она так же является учебным проектом и будет длиться 3 месяца.
+                                        Где проходить стажировку вы решаете сами.
+                                        После стажировки в вашем персональном учебном плане откроются ветки для
+                                        изучения дополнительных направлений и языков:
+                                    </div>
+
+                                </div>
+
                             </div>
+
+                            <!-- Ask #2-->
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="flush-heading_2_2">
+                                    <button class="accordion-button collapsed "
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#pr_2"
+                                            aria-expanded="false"
+                                            aria-controls="pr_2">
+                                        <p class="lead">
+                                            Каковы основные требования для поступления?
+                                        </p>
+                                    </button>
+                                </h2>
+
+                                <div id="pr_2"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="flush-headingOne"
+                                     data-bs-parent="#accordionFlushExample">
+
+                                    <div class="accordion-body">
+                                        Мы не судим о способностях по школьным или университетским оценкам, поэтому не
+                                        попросим вас предоставить аттестат или диплом о высшем образовании. Вместо этого
+                                        мы предложим пройти онлайн -игры— они лучше выявляют необходимые для программиста
+                                        способности. После игр необходимо присутствовать на онлайн встрече с командой
+                                        Школы, которая проходит в формате вебинара. На ней вы узнаете все о поступлении
+                                        и обучении. Далее вы записываете короткое видеоинтервью, которое состоит из двух
+                                        вопросов. Подав документы, вы попадаете на интенсив продолжительностью 26 дней —
+                                        пробный период обучения. После прохождения отборочного интенсива самые талантливые
+                                        и мотивированные участники зачисляются в Школу 21.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
                         </div>
-                        <div class="process-item__description">
-                            Учёба начнётся через несколько недель после интенсива. Специализация, языки программирования и график — на выбор участника. Занятия можно совмещать с работой или учёбой в вузе
-                            <br>~1,5–3 года
-                        </div>
+                    </div>
+
                 </div>
-            </div>
-                </div>
-            <div class="process__btn-box">
-            <button class="process__btn"> Хочу поступить </button>
             </div>
         </div>
     </section>
-<!-- work -->
-
-<!-- contact -->
-
-<!-- FAQ-->
-
-<!-- footer -->
-    <div th:insert="blocks/footer/footer :: footer"></div>
-<div class="bg-dark"></div>
-<!--JS-->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script th:src="@{/js/main.js}" ></script>
-</body>
+        <!--=====================Footer====================================== -->
+        <div th:insert="blocks/footer/footer :: footer" class="footer" ></div>
+    <div th:insert="blocks/sys/js :: js"></div>
+    </body>
 </html>
