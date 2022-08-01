@@ -44,7 +44,10 @@ public class User {
     private int sqlSkill = 0;
     private int phpSkill = 0;
     /*learning and projects*/
+    private int learnLevel = 0;
     private Long currentLectureId = 0l;
+    private String titleCurrentLecture = "Intro";
+    private Long currentProjectId = 1l;
 
     /*============================== CONSTRUCTORS ====================================================================*/
     public User() {}
@@ -86,6 +89,9 @@ public class User {
     public int getPhpSkill() { return phpSkill; }
     public String getName() { return name; }
     public String getLastname() { return lastname; }
+    public Long getCurrentLectureId() { return currentLectureId; }
+    public String getTitleCurrentLecture() {return titleCurrentLecture; }
+    public int getLearnLevel() { return learnLevel; }
     /*============================================== SETTERS =========================================================*/
     public void setId(Long id) { this.id = id; }
     public void setUsername(String username) { this.username = username; }
@@ -113,6 +119,8 @@ public class User {
     public void setName(String name) { this.name = name; }
     public void setLastname(String lastname) { this.lastname = lastname; }
     public void setCurrentLectureId(Long currentLectureId) { this.currentLectureId = currentLectureId; }
+    public void setTitleCurrentLecture(String titleCurrentLecture) {this.titleCurrentLecture = titleCurrentLecture; }
+    public void setLearnLevel(int learnLevel) { this.learnLevel = learnLevel; }
     /*================================================= SYSTEM =======================================================*/
     /*================================================= SYSTEM =======================================================*/
     /*toString*/
@@ -120,7 +128,15 @@ public class User {
     /*equals*/
     /*initialize*/
     /*================================================= STATIC METHODS ===============================================*/
+    /*ban user*/
+    /**/
     /*================================================= METHODS CLASS ================================================*/
+    public void nextLecture() {
+        currentLectureId++;
+    }
+    public void levelLearnUp() {
+        learnLevel++;
+    }
     /*peer points down*/
     public void peerPointsDown() {
         peerPoints--;

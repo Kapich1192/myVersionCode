@@ -1,3 +1,9 @@
+/*
+* java(1-100)
+* C(101-200)
+* C++(201-300)
+* Python(301-400)
+* */
 package com.code.models.lecture;
 
 import javax.persistence.Entity;

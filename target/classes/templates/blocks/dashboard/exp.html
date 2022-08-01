@@ -5,16 +5,44 @@
         <h2 class="display-4">Опыт</h2>
         <hr>
         <p class="lead">
-          Твой опыт показывает насколько далеко ты продвинулся в своем обучении
+          Твой опыт показывает насколько далеко ты продвинулся в своем обучении.
+          Что влияет на опыт:
+        </p>
+        <ul>
+          <li><p><strong>Решение задач</strong></p></li>
+          <li><p><strong>Лекции</strong></p></li>
+          <li><p><strong>Экзамены</strong></p></li>
+          <li><p><strong>Проверки пиров</strong></p></li>
+          <li><p><strong>Участие в хакатонах</strong></p></li>
+        </ul>
+        <p>
+          Решай задачи, проходи новые лекции и
+          проекты, сдавай экзамены, проверяй других пиров, учавствуй в хакатонах, все эти действия влияют на твой опыт и
+          прогресс.
         </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 shadow-lg p-3 mb-5 bg-body border rounded-5">
-        <img src="img/users/unknown.jpg" class="border rounded-5" style="height: 250px;">
-        <hr>
-        <h3>[[${users.name}]] [[${users.lastname}]]</h3>
-        <h3>email: [[${users.email}]]</h3>
-        <h3>tel: [[${users.tel}]]</h3>
+        <div class="row ms-2 mt-2 mb-2 me-2 border rounded-5 ">
+          <div class="col-6 ">
+            <img src="img/users/unknown.jpg" class="border rounded-5 mb-2 mt-2 mr-2 ml-2" style="height: 250px;">
+          </div>
+
+          <div class="col-6 ">
+            <h3>[[${users.name}]] [[${users.lastname}]]</h3>
+            <h3>email: [[${users.email}]]</h3>
+            <h3>tel: [[${users.tel}]]</h3>
+            <h3>Specialisation: Java Developer</h3>
+          </div>
+        </div>
+
+        <div class="row border rounded-5 ms-2 mt-2 mb-2 me-2">
+          <div class="ms-2 mt-2 mb-2 me-2">
         <h3>Peer points: [[${users.peerPoints}]]</h3>
+        <h3>Level learn: </h3>
+        <h3>Current lecture: "[[${users.titleCurrentLecture}]]"</h3>
+        <h3>Current project:</h3>
+          </div>
+        </div>
       </div>
     </div>
     <h5>Java Developer</h5>
