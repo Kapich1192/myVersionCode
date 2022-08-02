@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${title}"></title>
         <!-- CSS only -->
         <div th:insert="blocks/sys/css :: css"></div>
 </head>
@@ -74,7 +74,8 @@
                             <h3 class="display-4">@username</h3>
                         </div>
                         <!-- Board -->
-                        <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
+                        <div>
+                            <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
                             <!--Sender single message-->
                             <div class="container">
                                 <div class="d-flex flex-row mb-3">
@@ -99,6 +100,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <!-- message-->
                         <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2" style="height: 44px;">
