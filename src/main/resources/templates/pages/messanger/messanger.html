@@ -6,7 +6,7 @@
         <!-- CSS only -->
         <div th:insert="blocks/sys/css :: css"></div>
 </head>
-    <body>
+    <body >
     <!--================================ Navigation ==================================-->
         <div class="sticky-top">
             <!--Fragment Header-->
@@ -15,92 +15,121 @@
             <div th:insert="blocks/header/header :: menu"></div>
         </div>
     <!--================================ Content  ==================================-->
-    <div class="bg-light">
-        <div class="container-fluid border" style="padding: 50px 50px 0 100px">
+    <div class="container-fluid bg-light" style="height:650px;">
+        <div>
+            <div class="mb-3 me-3 mt-3 ms-5 border rounded-5 bg-success opacity-75 col-xs-12 col-sm-12 col-md-12 col-lg col-xl-12 shadow-lg"
+                 style="height:680px; ">
+                <h1 th:text="${title}"  style="color: white;"></h1>
+                <div class="row">
 
-            <!--Fragment -->
-            <div class="row shadow-lg p-3 mb-5 bg-dark border rounded-5 opacity-75 ">
-                <!-- Left part-->
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 bg-success rounded-5 shadow-lg p-3 mb-5" style="height: 650px;">
+                    <!-- Left part-->
+                    <div class="col-3 bg-dark border rounded-5 ms-2 mt-2" style="height:590px;">
+                        <!--Menu-->
+                        <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2" style="height: 50px;">
 
-                    <div class="row bg-body rounded-5">
-                        <div class="item item-notifications dropdown col-2">
-
-                            <div class="dropdown-toggle  rounded-1 " id="learn" data-toggle="dropdown" aria-expanded="false" role="button" data-bs-toggle="dropdown" >
-                                <span class="sr-only">Learning</span>
-                                <span class="pe-icon pe-7s-menu icon" data-toggle="tooltip" data-placement="bottom" title="Learning" style="font-size: 40px;"></span>
-                            </div>
-
-                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg p-3 mb-5 bg-body border rounded-5" aria-labelledby="learn" style="width: 100px;">
-                                <li><a class="dropdown-item rounded-2" href="/current_lecture"><i class="pe-icon pe-7s-tools"></i>    Current lecture</a></li>
-                                <li><a class="dropdown-item rounded-2" href="/learn_action"><i class="pe-icon pe-7s-tools"></i>    Learn action</a></li>
-                                <li><a class="dropdown-item rounded-2" href="/learn_map"><i class="pe-icon pe-7s-graph1"></i>    Learn Map</a></li>
-                                <li><a class="dropdown-item rounded-2" href="/peer_to_peer"><i class="pe-icon pe-7s-id"></i>    Peer to Peer</a></li>
-                                <li><a class="dropdown-item rounded-2" href="/problems"><i class="pe-icon pe-7s-settings"></i>    Problems</a></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="search-container col-10">
-                            <form id="main-search" class="main-search " action="/search" method="get">
-                                <div id="main-search-input-wrapper" class="main-search-input-wrapper " style="display: block;">
-                                    <input type="text" class="input main-search-input form-control rounded-5" name="q" value placeholder="Search">
+                            <div class="row mb-2 me-2 mt-2 ms-2 ">
+                                <div class="col-1 me-5">
+                                    <button type="submit" class="btn btn-success rounded-5"><i
+                                            class="pe-icon pe-7s-menu icon"></i></button>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row border rounded-5 bg-body shadow-lg p-3 mb-5 ">
-                        <h6>@username</h6>
-                        <hr>
-                        <p>last message</p>
-                    </div>
-
-                    <div class="row border rounded-5 bg-body shadow-lg p-3 mb-5">
-                        <h6>@username</h6>
-                        <hr>
-                        <p>last message</p>
-                    </div>
-
-                    <div class="row border rounded-5 bg-body shadow-lg p-3 mb-5">
-                        <h6>@username</h6>
-                        <hr>
-                        <p>last message</p>
-                    </div>
-
-                    <div class="row border rounded-5 bg-body shadow-lg p-3 mb-5">
-                        <h6>@username</h6>
-                        <hr>
-                        <p>last message</p>
-                    </div>
-
-                </div>
-                <!-- Divider-->
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 ">
-
-                </div>
-                <!--Right part-->
-                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-success rounded-5 shadow-lg p-3 mb-5" style="height: 650px;">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 bg-light rounded-5 shadow-lg p-3 mb-5 row" style="height: 500px;">
+                                <div class="col-8">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" class="form-control rounded-5" id="search"
+                                                       placeholder="search">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
 
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  bg-light rounded-5 shadow-lg p-3 mb-5 row ">
-                            <form id="message" class="main-search " action="/messages" method="post">
-                        <div id="main-message-input-wrapper" class="main-search-input-wrapper " style="display: block;">
-                            <div class="row">
-                                <div class="col-10" ><input type="text" class="input main-search-input form-control rounded-5" name="q" value placeholder="message"></div>
-                                <div class="col-2"><button class="btn btn-success rounded-5"><i class="pe-icon pe-7s-paper-plane icon" ></i></button></div>
+                        <!--Contacts-->
+                        <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
+
+                            <div class="col-11 mb-1 me-1 mt-1 ms-1 ">
+                                <div class=" border border-success bg-light shadow-lg rounded-5 ">
+                                    <h4 class="mb-2 me-2 mt-2 ms-2">@username</h4>
+                                    <hr class="success">
+                                    <p class="mb-2 me-2 mt-2 ms-2">
+                                        Hi bro!
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- new chart -->
+                        <button class=" btn btn-success rounded-5 mb-2 me-2 mt-2 ms-2" style="height: 40px;">
+                            New chart
+                        </button>
+                    </div>
+
+                    <!--Right part-->
+                    <div class="col-8 bg-dark border rounded-5 ms-2 mt-2" style="height:590px;">
+                        <!-- Info -->
+                        <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2" style="height: 50px;">
+                            <h3 class="display-4">@username</h3>
+                        </div>
+                        <!-- Board -->
+                        <div>
+                            <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
+                            <!--Sender single message-->
+                            <div class="container">
+                                <div class="d-flex flex-row mb-3">
+                                    <div class=" border bg-success rounded-5 col-8">
+                                        <p class="p-2">22:30:31 22.01.2022</p>
+                                        <hr>
+                                        <p class="p-2">
+                                            Hi i am sender!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Recipient single message-->
+                            <div class="container">
+                                <div class="d-flex flex-row-reverse mb-3">
+                                    <div class="border bg-primary rounded-5 col-8 ">
+                                        <p class="p-2">22:30:31 22.01.2022</p>
+                                        <hr>
+                                        <p class="p-2">
+                                            Hi i am recipient!
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </form>
+                        </div>
+                        <!-- message-->
+                        <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2" style="height: 44px;">
+
+                            <div class="row mb-2 me-2 mt-2 ms-2 ">
+                                <div class="col-1">
+                                    <button type="submit" class="btn btn-success rounded-5"><i
+                                            class="pe-icon pe-7s-paperclip icon"></i></button>
+                                </div>
+                                <div class="col-11">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-9 ">
+                                                <input type="text" class="form-control rounded-5" id="message"
+                                                       placeholder="message">
+                                            </div>
+                                            <div class="col-1">
+                                                <button type="submit" class="btn btn-success rounded-5"><i
+                                                        class="pe-icon pe-7s-paper-plane icon"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
+                </div>
             </div>
-
-
         </div>
     </div>
         <!--=====================Footer====================================== -->
