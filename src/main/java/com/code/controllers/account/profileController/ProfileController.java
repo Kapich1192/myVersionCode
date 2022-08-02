@@ -31,7 +31,23 @@ public class ProfileController {
 
     /*============================================ UPDATE ============================================================*/
     /*Update name*/
+    @PostMapping("/profile/upd_name")
+    public String updateUserName(@RequestParam String upd_name, Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepo.findByUsername(auth.getName());
+        user.setName(upd_name);
+        userRepo.save(user);
+        return "redirect:/profile";
+    }
     /*Update lastname*/
+    @PostMapping("/profile/upd_lastname")
+    public String updateUserLastname(@RequestParam String upd_lastname,Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user =userRepo.findByUsername(auth.getName());
+        user.setLastname(upd_lastname);
+        userRepo.save(user);
+        return "redirect:/profile";
+    }
 
     /*Update username*/
 //    @PostMapping("/profile/upd_username")

@@ -17,7 +17,6 @@ public class MessangerController {
     MessageRepo messageRepo;
     @Autowired
     UserRepo userRepo;
-
     @GetMapping("/messages")
     public String getMessages(Model model) {
         /*Meta*/
@@ -25,9 +24,11 @@ public class MessangerController {
         /*User*/
         /*===============User======================*/
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        Object principal = auth.getPrincipal();
-        User user = userRepo.findByUsername(auth.getName());
+        User userRecipient = userRepo.findByUsername(auth.getName());
+        User userSender;
         /*Messages*/
+        Iterable<Message> messages = messageRepo.findAllByRecipientId(userRecipient.getId());
+        model.addAttribute("messages", messages);
 
 //        Iterable<Message> recipientMessages = messageRepo.findByRecipientId(user.getId());
 //        model.addAttribute("recipient",recipientMessages);

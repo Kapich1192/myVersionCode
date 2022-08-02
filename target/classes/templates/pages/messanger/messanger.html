@@ -49,10 +49,12 @@
                         <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
 
                             <div class="col-11 mb-1 me-1 mt-1 ms-1 ">
-                                <div class=" border border-success bg-light shadow-lg rounded-5 ">
-                                    <h4 class="mb-2 me-2 mt-2 ms-2">@username</h4>
+                                <div class="  bg-dark shadow-lg rounded-5 ">
+                                    <div>
+                                    <h4  class="p-2" style="color: white;">@username</h4>
+                                    </div>
                                     <hr class="success">
-                                    <p class="mb-2 me-2 mt-2 ms-2">
+                                    <p class="p-3" style="color: white;">
                                         Hi bro!
                                     </p>
                                 </div>
@@ -76,30 +78,32 @@
                         <!-- Board -->
                         <div>
                             <div class="row bg-light rounded-5 mb-2 me-2 mt-2 ms-2 overflow-auto" style="height: 470px;">
-                            <!--Sender single message-->
-                            <div class="container">
-                                <div class="d-flex flex-row mb-3">
-                                    <div class=" border bg-success rounded-5 col-8">
-                                        <p class="p-2">22:30:31 22.01.2022</p>
-                                        <hr>
-                                        <p class="p-2">
-                                            Hi i am sender!
-                                        </p>
+                                <div th:each="mes : ${messages}">
+                                    <!--Sender single message-->
+                                    <div class="container">
+                                        <div class="d-flex flex-row mb-3">
+                                            <div class=" border bg-success rounded-5 col-8">
+                                                <p class="p-2">22:30:31 22.01.2022</p>
+                                                <hr>
+                                                <p class="p-2">
+                                                    [[${mes.text}]]
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Recipient single message-->
+                                    <div class="container">
+                                        <div class="d-flex flex-row-reverse mb-3">
+                                            <div class="border bg-primary rounded-5 col-8 ">
+                                                <p class="p-2">22:30:31 22.01.2022</p>
+                                                <hr>
+                                                <p class="p-2">
+                                                    Hi i am recipient!
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--Recipient single message-->
-                            <div class="container">
-                                <div class="d-flex flex-row-reverse mb-3">
-                                    <div class="border bg-primary rounded-5 col-8 ">
-                                        <p class="p-2">22:30:31 22.01.2022</p>
-                                        <hr>
-                                        <p class="p-2">
-                                            Hi i am recipient!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         </div>
                         <!-- message-->

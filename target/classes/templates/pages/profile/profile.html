@@ -28,38 +28,62 @@
             <div class="row shadow-lg p-3 mb-5 bg-body border rounded-5">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <h2 class="display-4">Main</h2>
-                    <p>Name: [[${usr.name}]];</p>
-                    <form action="/profile" method="post" id="update_name">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Проверить меня</label>
+                    <!-- Edit name -->
+                    <form action="/profile/upd_name" method="post" id="update_name">
+                        <div class="row">
+                            <label for="upd_name" class="form-label">Current name: [[${usr.name}]];</label>
+                            <div class="col-8 mb-3">
+                                <input type="text" class="form-control" name="upd_name" id="upd_name"
+                                       aria-describedby="emailHelp"
+                                       th:placeholder="${usr.name}">
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-success">Изменить</button>
+                            </div>
                         </div>
                     </form>
-                    <p>Lastname: [[${usr.lastname}]];</p>
                     <hr>
-                    <form  action="/profile/upd_email" method="post" id="update_email">
+                    <!-- Edit Lastname -->
+                    <form action="/profile/upd_lastname" method="post" id="update_lastname">
+                        <div class="row">
+                            <label for="upd_lastname" class="form-label">Current lastname: [[${usr.lastname}]];</label>
+                            <div class="col-8 mb-3">
+                                <input type="text" class="form-control" name="upd_lastname" id="upd_lastname"
+                                       aria-describedby="emailHelp"
+                                       th:placeholder="${usr.lastname}">
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-success">Изменить</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Edit email -->
+                    <hr>
+                    <form action="/profile/upd_email" method="post" id="update_email">
                         <div class="row">
                             <label for="upd_email" class="form-label">Current email: [[${usr.email}]];</label>
                             <div class="col-8 mb-3">
-                                <input type="tel" class="form-control" name="upd_email" id="upd_email" aria-describedby="emailHelp"
+                                <input type="tel" class="form-control" name="upd_email" id="upd_email"
+                                       aria-describedby="emailHelp"
                                        th:placeholder="${usr.email}">
                             </div>
                             <div class="col-2">
-                                <button type="submit" class="btn btn-primary">Изменить</button>
+                                <button type="submit" class="btn btn-success">Изменить</button>
                             </div>
                         </div>
                     </form>
-
+                    <!-- Edit tel -->
                     <hr>
-                    <form  action="/profile/upd_tel" method="post" id="update_tel">
+                    <form action="/profile/upd_tel" method="post" id="update_tel">
                         <div class="row">
                             <label for="upd_tel" class="form-label">Current tel: [[${usr.tel}]];</label>
                             <div class="col-8 mb-3">
-                                <input type="tel" class="form-control" name="upd_tel" id="upd_tel" aria-describedby="emailHelp"
+                                <input type="tel" class="form-control" name="upd_tel" id="upd_tel"
+                                       aria-describedby="emailHelp"
                                        th:placeholder="${usr.tel}">
                             </div>
                             <div class="col-2">
-                                <button type="submit" class="btn btn-primary">Изменить</button>
+                                <button type="submit" class="btn btn-success">Изменить</button>
                             </div>
                         </div>
                     </form>
